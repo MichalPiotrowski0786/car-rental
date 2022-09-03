@@ -1,13 +1,7 @@
-interface Props {
-    id: string | number
-    name: string
-    range: number
-    away: number
-    available: boolean
-}
+import type { ICar } from "../interfaces/interfaces"
 
-const ReservationCard = ({ id, name, range, away, available }: Props) => {
-    const color: string = !available ? 'text-gray-500' : ''
+const ReservationCard = ({ id, name, range, away, isAvailable }: ICar) => {
+    const color: string = !isAvailable ? 'text-gray-500' : ''
 
     return (
         <div className={`m-4 p-4 border-2 rounded-lg ${color}`}>
