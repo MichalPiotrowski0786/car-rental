@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Reservations = ({ cars }: ICarArray) => {
     return (
-        <div className='grid-cols-3 text-3xl p-2'>
+        <div className='grid grid-cols-1 md:grid-cols-3 text-3xl p-2'>
             {cars?.map(car => (
                 <ReservationCard 
                     key={car.id}
