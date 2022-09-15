@@ -2,7 +2,7 @@ import type { NextPage, GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Reservations from '../components/Reservations'
 
-const Home: NextPage = ({cars}: any) => {
+const Home: NextPage = ({ cars }: any) => {
   return (
     <div>
       <Head>
@@ -13,7 +13,7 @@ const Home: NextPage = ({cars}: any) => {
 
       <main>
         <h1 className='flex justify-center items-center m-4 text-3xl md:text-5xl p-4 border-b-2'>Car Renatal Service</h1>
-        <Reservations cars={cars}/>
+        <Reservations cars={cars} />
       </main>
     </div>
   )
@@ -27,7 +27,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
     const res = await fetch(apiUrl)
     cars = await res.json()
-  } catch(err) {
+  } catch (err) {
     console.log(err)
   }
 
