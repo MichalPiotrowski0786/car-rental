@@ -1,4 +1,4 @@
-export interface ICar {
+export type Car = {
     id: string
     name: string
     range: number
@@ -6,6 +6,6 @@ export interface ICar {
     isAvailable: boolean
 }
 
-export interface ICarArray {
-    cars: ICar[]
+export type CarArray = {
+    cars: Car[]
 }

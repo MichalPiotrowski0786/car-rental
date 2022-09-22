@@ -28,7 +28,7 @@ const NewReservationCard = () => {
                 <input type='text' value={name} onChange={(e) => setName(e.target.value)} className='ml-6 mt-2 rounded-full text-center w-40' />
             </label>
             <label>Range:
-                <input min={0} size={4} type='number' value={range} onChange={(e) => setRange(+e.target.value)} className='ml-6 mt-2 rounded-full text-center w-40' />
+                <input min={0} type='number' value={range} onChange={(e) => setRange(+e.target.value)} className='ml-6 mt-2 rounded-full text-center w-40' />
             </label>
             <label>Away:
                 <input min={0} step={.1} type='number' value={away} onChange={(e) => setAway(+e.target.value)} className='ml-6 mt-2 rounded-full text-center w-40' />

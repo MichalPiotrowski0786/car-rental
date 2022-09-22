@@ -1,8 +1,8 @@
-import type { ICarArray } from "../interfaces/interfaces"
+import type { CarArray } from "../types/types"
 import ReservationCard from "./ReservationCard"
 import NewReservationCard from "./NewReservationCard"
 
-const Reservations = ({ cars }: ICarArray) => {
+const Reservations = ({ cars }: CarArray) => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-3 text-3xl p-2'>
             {cars?.map(car => (
