@@ -12,11 +12,8 @@ const NewReservationCard = () => {
             "away": away,
             "isAvailable": true
         }
-
-        console.log(JSON.stringify(form))
-
         const apiUrl = 'https://localhost:3001/api'
-        const res = await fetch(apiUrl, {
+        await fetch(apiUrl, {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
